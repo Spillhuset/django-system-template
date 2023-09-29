@@ -1,0 +1,27 @@
+{% extends 'skeleton.html' %}
+{% load static %}
+
+{% block title %}Logg inn{% endblock %}
+
+{% load bootstrap5 %}
+{% block bootstrap %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+{% endblock %}
+
+{% block googlefonts %}
+  <link rel="stylesheet" href="{% static 'fonts/manrope:wght@400;700.css' %}">
+{% endblock %}
+
+{% block body %}
+<main class="container py-3" style="width: 400px;">
+  <h1>Logg inn til {{ settings.APP_NAME }}</h1>
+  <form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+      <button type="submit" class="btn btn-primary">Logg inn</button>
+    {% endbuttons %}
+  </form>
+</main>
+{% endblock %}
