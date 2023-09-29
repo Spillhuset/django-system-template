@@ -20,13 +20,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: ${{ github.ref == 'refs/heads/main' && 'Build and Push' || 'Test Build' }}
+      - name: ${{ github.ref == 'refs/heads/main' && 'Build and Push' || 'Test Build' }} App
         uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5
         with:
             push: ${{ github.ref == 'refs/heads/main' }}
-            tags: ghcr.io/spillhuset/django-system-template
+            tags: ghcr.io/spillhuset/django-system-template-app
 
-      - name: ${{ github.ref == 'refs/heads/main' && 'Build and Push' || 'Test Build' }}
+      - name: ${{ github.ref == 'refs/heads/main' && 'Build and Push' || 'Test Build' }} Nginx
         uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5
         with:
             push: ${{ github.ref == 'refs/heads/main' }}
