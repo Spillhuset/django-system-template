@@ -159,3 +159,7 @@ SHAUTH_ENCRYPTION_KEY = os.environ.get("SHAUTH_ENCRYPTION_KEY", None)
 GOOGLE_FONTS = [
   "Manrope:wght@400;700"
 ]
+
+# Login redirect
+
+LOGIN_REDIRECT_URL = "/"
