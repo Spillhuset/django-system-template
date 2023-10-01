@@ -35,7 +35,7 @@ CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "http://127.0.0.1,
 # Application definition
 
 INSTALLED_APPS = [
-  'app.apps.AppConfig',
+  'apps.main.apps.MainConfig',
   'shauth.apps.ShauthConfig',
   'django.contrib.admin',
   'django.contrib.auth',
@@ -83,7 +83,7 @@ TEMPLATES = [
         'django.contrib.auth.context_processors.auth',
         'django.contrib.messages.context_processors.messages',
         'core.context_processors.constants',
-        'app.context_processors.navigation_links'
+        'apps.main.context_processors.navigation_links'
       ],
     },
   },
