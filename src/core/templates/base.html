@@ -1,10 +1,9 @@
 {% extends 'skeleton.html' %}
 {% load static %}
 
-{% load bootstrap5 %}
-{% block bootstrap %}
-  {% bootstrap_css %}
-  {% bootstrap_javascript %}
+{% load static tailwind_tags %}
+{% block tailwind %}
+  {% tailwind_css %}
 {% endblock %}
 
 {% block fontawesome %}
@@ -16,46 +15,31 @@
   <link rel="stylesheet" href="{% static 'fonts/manrope:wght@400;700.css' %}">
 {% endblock %}
 
-{% block basecss %}
-  <link rel="stylesheet" href="{% static 'css/core.css' %}">
-{% endblock %}
-
 {% block body %}
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="/">{{ settings.APP_NAME }}</a>
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-</header>
-<div class="container-fluid">
-  <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-      <div class="position-sticky pt-3 sidebar-sticky">
-        <ul class="nav flex-column">
+  <head class="bg-black">
+    <header class="bg-gray-900 px-3 py-2 text-white flex gap-3">
+      <h1 class="text-2xl font-bold">{{ settings.APP_NAME }}</h1>
+      {% if user.is_superuser %}
+        <a href="/admin" class="text-gray-400 h-full my-auto">Admin</a>
+      {% endif %}
+    </header>
+    <div class="flex flex-row">
+      <div class="bg-gray-800 h-screen">
+        <ul class="flex flex-col gap-2 py-2 px-3">
           {% for link in sidebar_items %}
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="{{ link.url }}">
-                <span data-feather="home" class="align-text-bottom"></span>
+            <li>
+              <a href="{{ link.url }}" class="text-gray-400 hover:text-white">
                 {{ link.title }}
               </a>
             </li>
           {% endfor %}
-          {% if user.is_superuser %}
-            <li class="nav-item">
-              <a class="nav-link" href="/admin">
-                <span data-feather="bar-chart-2" class="align-text-bottom"></span>
-                Admin
-              </a>
-            </li>
-          {% endif %}
-        </ul>
+          </ul>
       </div>
-    </nav>
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      {% block content %}
-        <h1 class="border-bottom pt-3 pb-2 mb-2">{{ settings.APP_NAME }}</h1>
-      {% endblock %}
-    </main>
-  </div>
-</div>
+      <main class="bg-gray-700 text-white w-full py-2 px-4">
+        {% block content %}
+          <h1 class="text-2xl font-bold border-b border-white pt-3 pb-2 mb-2">{{ settings.APP_NAME }}</h1>
+        {% endblock %}
+      </main>
+    </div>
+  </head>
 {% endblock %}

@@ -6,8 +6,6 @@ services:
     restart: unless-stopped
     env_file:
       - ./.env
-    expose:
-      - 80
     depends_on:
       - db
 
@@ -24,7 +22,7 @@ services:
   nginx:
     build:
       context: .
-      dockerfile: nginx/Dockerfile
+      target: runtime-nginx
     restart: unless-stopped
     ports:
       - ${PORT}:80
