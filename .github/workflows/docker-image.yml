@@ -38,4 +38,4 @@ jobs:
           cache-to: type=gha,mode=max
           push: ${{ github.ref == 'refs/heads/main' }}
           tags: ghcr.io/spillhuset/django-system-template-nginx
-          target: runtine-nginx
+          target: runtime-nginx
