@@ -5,4 +5,4 @@ def index(request):
     if not request.user.is_authenticated:
         if settings.SHAUTH_SYSTEM_NAME is None: return redirect("/accounts/login")
         else: return redirect("/auth")
-    return render(request, "../core/base.html")
+    return render(request, "base.html")
