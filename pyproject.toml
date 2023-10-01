@@ -15,7 +15,9 @@ pyjwt = "^2.8.0"
 psycopg2-binary = "^2.9.7"
 fontawesomefree = "^6.4.2"
 django-google-fonts = "^0.0.3"
-django-bootstrap-v5 = "^1.0.11"
+django-tailwind = {extras = ["reload"], version = "^3.6.0"}
+crispy-tailwind = "^0.5.0"
+django-crispy-forms = "^2.0"
 
 [build-system]
 requires = ["poetry-core"]

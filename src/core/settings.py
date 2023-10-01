@@ -43,7 +43,9 @@ INSTALLED_APPS = [
   'django.contrib.sessions',
   'django.contrib.messages',
   'django.contrib.staticfiles',
-  'bootstrap5',
+  'tailwind', 'theme',
+  'crispy_forms', 'crispy_tailwind',
+  'django_browser_reload',
   'guardian',
   'fontawesomefree',
   'django_google_fonts',
@@ -57,6 +59,7 @@ MIDDLEWARE = [
   'django.contrib.auth.middleware.AuthenticationMiddleware',
   'django.contrib.messages.middleware.MessageMiddleware',
   'django.middleware.clickjacking.XFrameOptionsMiddleware',
+  "django_browser_reload.middleware.BrowserReloadMiddleware"
 ]
 
 AUTHENTICATION_BACKENDS = (
@@ -163,3 +166,10 @@ GOOGLE_FONTS = [
 # Login redirect
 
 LOGIN_REDIRECT_URL = "/"
+
+# Tailwind
+
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = [ '127.0.0.1' ]
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+CRISPY_TEMPLATE_PACK = "tailwind"
