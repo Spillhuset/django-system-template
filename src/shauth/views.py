@@ -24,7 +24,7 @@ def auth(request):
                 user.is_staff = True
 
               user.save()
-              login(request, user)
+              login(request, user, backend="django.contrib.auth.backends.ModelBackend")
               return redirect("/")
         except Exception as e:
           print("exception:", e)
@@ -52,6 +52,6 @@ def apply_groups(user, flags):
 def find_or_create_group(name):
   groups = Group.objects.filter(name=name)
   if groups: return groups[0]
-  group = Group.objects.create(name=name, save=True)
+  group = Group.objects.create(name=name)
   group.save()
   return group
