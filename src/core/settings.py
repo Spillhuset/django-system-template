@@ -156,6 +156,7 @@ GUARDIAN_TEMPLATE_403 = BASE_DIR / 'core' / 'templates' / 'errors' / '403.html'
 
 SHAUTH_SYSTEM_NAME = os.environ.get("SHAUTH_SYSTEM_NAME", None)
 SHAUTH_ENCRYPTION_KEY = os.environ.get("SHAUTH_ENCRYPTION_KEY", None)
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True if SHAUTH_SYSTEM_NAME else False
 
 # Google fonts
 
