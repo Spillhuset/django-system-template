@@ -8,7 +8,7 @@ readme = "docs/README.md"
 
 [tool.poetry.dependencies]
 python = "3.11.5"
-django = "4.2.5"
+django = "4.2.6"
 gunicorn = "21.2.0"
 django-guardian = "2.4.0"
 pyjwt = "2.8.0"
