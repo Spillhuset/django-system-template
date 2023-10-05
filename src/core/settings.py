@@ -35,21 +35,27 @@ CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS", "http://127.0.0.1,
 # Application definition
 
 INSTALLED_APPS = [
-  'apps.main.apps.MainConfig',
-  'shauth.apps.ShauthConfig',
+  # built-in
   'django.contrib.admin',
   'django.contrib.auth',
   'django.contrib.contenttypes',
   'django.contrib.sessions',
   'django.contrib.messages',
   'django.contrib.staticfiles',
+  # permissions
+  'guardian',
+  # spillhuset
+  'shauth.apps.SHauthConfig',
+  'apps.main.apps.MainConfig',
+  # tailwind
   'tailwind', 'theme',
   'crispy_forms', 'crispy_tailwind',
-  'django_browser_reload',
-  'guardian',
+  # misc css
   'fontawesomefree',
   'django_google_fonts',
-]
+] + ([
+  'django_browser_reload',
+] if DEBUG else [])
 
 MIDDLEWARE = [
   'django.middleware.security.SecurityMiddleware',
@@ -73,7 +79,7 @@ TEMPLATES = [
   {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
     'DIRS': [
-      BASE_DIR / 'core' / 'templates',
+      BASE_DIR / 'templates',
     ],
     'APP_DIRS': True,
     'OPTIONS': {
@@ -89,6 +95,7 @@ TEMPLATES = [
   },
 ]
 
+ASGI_APPLICATION = "core.asgi.application"
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
@@ -142,15 +149,18 @@ STATICFILES_DIRS = [
 
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
 # Guardian
 
 GUARDIAN_RENDER_403 = True
-GUARDIAN_TEMPLATE_403 = BASE_DIR / 'core' / 'templates' / 'errors' / '403.html'
+GUARDIAN_TEMPLATE_403 = BASE_DIR / 'templates' / 'errors' / '403.html'
+
 
 # shauthy like a melody in my head
 
@@ -158,15 +168,18 @@ SHAUTH_SYSTEM_NAME = os.environ.get("SHAUTH_SYSTEM_NAME", None)
 SHAUTH_ENCRYPTION_KEY = os.environ.get("SHAUTH_ENCRYPTION_KEY", None)
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True if SHAUTH_SYSTEM_NAME else False
 
+
 # Google fonts
 
 GOOGLE_FONTS = [
   "Manrope:wght@400;700"
 ]
 
+
 # Login redirect
 
 LOGIN_REDIRECT_URL = "/"
+
 
 # Tailwind
 

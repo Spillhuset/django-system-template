@@ -18,15 +18,13 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls.static import static
 from django.conf import settings
-from django.views.generic import TemplateView
 
 urlpatterns = [
-  path('accounts/', include('django.contrib.auth.urls')),
-  path('admin/', admin.site.urls),
-  path("auth/", include("shauth.urls")),
-  path('', include("apps.main.urls")),
-  path("__reload__/", include("django_browser_reload.urls")),
-  path("error", TemplateView.as_view(template_name="errors/400.html")),
+  path('accounts/', include('django.contrib.auth.urls'), name="accounts"),
+  path('admin/', admin.site.urls, name="admin"),
+  path("__reload__/", include("django_browser_reload.urls"), name="reload"),
+  path("auth/", include("shauth.urls"), name="shauth"),
+  path('', include("apps.main.urls"), name="main"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler400 = "core.views.handler400"

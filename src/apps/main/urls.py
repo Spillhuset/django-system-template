@@ -1,7 +1,7 @@
 from . import views
-from django.urls import path
+from django.urls import include, path
 from django.views.generic import TemplateView
 
 urlpatterns = [
-  path("", views.index),
+  path("", views.index, name="index"),
 ]

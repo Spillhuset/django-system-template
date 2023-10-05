@@ -1,0 +1,55 @@
+{% extends 'skeleton.html' %}
+{% load static %}
+
+{% load static tailwind_tags %}
+{% block tailwind %}
+  {% tailwind_css %}
+{% endblock %}
+
+{% block fontawesome %}
+  <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block googlefonts %}
+  <link rel="stylesheet" href="{% static 'fonts/manrope:wght@400;700.css' %}">
+{% endblock %}
+
+{% block body %}
+  <head class="bg-black font-['Manrope']">
+    <header class="bg-gray-900 px-3 py-2 text-white flex gap-3">
+      <button onclick="toggleSidebar();"><h1 class="text-2xl font-bold">{{ settings.APP_NAME }}</h1></button>
+      {% if user.is_superuser %}
+        <a href="/admin" class="text-gray-400 h-full my-auto">Admin</a>
+      {% endif %}
+    </header>
+    <div class="flex flex-row min-h-screen max-h-full">
+      <div id="sidebar" class="bg-gray-800 h-auto hidden opacity-0 md:block md:opacity-100 absolute md:static transition-opacity">
+        <ul class="flex flex-col gap-2 py-2 px-3">
+          {% for link in sidebar_items %}
+            <li>
+              <a href="{{ link.url }}" class="text-gray-400 hover:text-white whitespace-nowrap">
+                {{ link.title }}
+              </a>
+            </li>
+          {% endfor %}
+          </ul>
+      </div>
+      <div class="bg-gray-700 text-white w-full py-2 px-4 min-h-screen max-h-full">
+        <main class="mx-auto max-w-5xl md:py-6">
+          {% block content %}
+            <h1 class="text-2xl font-bold border-b border-white pt-3 pb-2 mb-2">{{ settings.APP_NAME }}</h1>
+            <p class="text-justify">{% lorem 9 b random %}</p>
+          {% endblock %}
+        </main>
+      </main>
+    </div>
+  </head>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      if (sidebar.classList.contains("opacity-0")) sidebar.classList.remove("hidden", "opacity-0") && sidebar.classList.add("opacity-100");
+      else sidebar.classList.add("opacity-0") && sidebar.classList.remove("opacity-100") && setTimeout(() => sidebar.classList.add("hidden"), 150);
+    }
+  </script>
+{% endblock %}
