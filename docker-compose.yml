@@ -10,7 +10,7 @@ services:
       - db
 
   db:
-    image: postgres:16-alpine@sha256:b20880f6cf45a3a82ebf3ff67455982e991f91ccc4bd9b30e2ea0ada795aa228
+    image: postgres:16-alpine@sha256:a8fa7ce0d42e93f1011661baefdfbdd5de04211038aeeb68cfe6e4c6839d580c
     restart: unless-stopped
     volumes:
       - ./database:/var/lib/postgresql/data
