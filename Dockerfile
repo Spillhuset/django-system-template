@@ -41,7 +41,7 @@ RUN SECRET_KEY=dummy \
     python3 manage.py collectstatic --noinput
 
 # runtime nginx image
-FROM nginx:alpine@sha256:630f82e85ce86906b5afefce8342b1389b1af3e1840259eedd8db97971378daf AS runtime-nginx
+FROM nginx:alpine@sha256:cedce0b6e276efe62bbf15345053f44cdc5d1c834a63ab7619aa8355093f85d2 AS runtime-nginx
 
 COPY --from=builder /app/src/static_built /var/www/html/static
 COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
