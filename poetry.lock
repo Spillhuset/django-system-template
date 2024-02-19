@@ -126,17 +126,21 @@ files = [
 
 [[package]]
 name = "crispy-tailwind"
-version = "0.5.0"
-description = "A tailwind package for Django Crispy Forms"
+version = "1.0.3"
+description = "Tailwind CSS for Django Crispy Forms"
 optional = false
-python-versions = ">=3.5"
+python-versions = ">=3.8"
 files = [
-    {file = "crispy-tailwind-0.5.0.tar.gz", hash = "sha256:0041c85b73b0a197e312ab969bd505aa1f96752a6a50324377287c2b6be3c0cb"},
-    {file = "crispy_tailwind-0.5.0-py3-none-any.whl", hash = "sha256:65cfcdf8dce96be37c99578e2688ed2d0067e6ff633baaf657358b3b3be052c7"},
+    {file = "crispy-tailwind-1.0.3.tar.gz", hash = "sha256:2bc9f616d406e4b003f25d46fcb0079f1c2522719d97adb107667271d849459a"},
+    {file = "crispy_tailwind-1.0.3-py3-none-any.whl", hash = "sha256:31427f66b1c4fd0d6fb040f4197cfb97d104cdbe7641ea2dea940c0057c4db4b"},
 ]
 
 [package.dependencies]
-django-crispy-forms = ">=1.11.2"
+django = ">=4.2"
+django-crispy-forms = ">=2.0"
+
+[package.extras]
+test = ["pytest", "pytest-django"]
 
 [[package]]
 name = "django"
@@ -480,4 +484,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "3.12.2"
-content-hash = "f9151b0577b5192656c51961f73bf9ded4acceb1d3e17d678ce1d011a8220b73"
+content-hash = "0126d2dfa8c39aa5c53e9e146535f93118016ef6cfd3248863f583a5ce34b04f"
