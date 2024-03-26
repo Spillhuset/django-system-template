@@ -17,7 +17,7 @@
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/forms": "0.5.7",
     "@tailwindcss/line-clamp": "0.4.4",
-    "@tailwindcss/typography": "0.5.10",
+    "@tailwindcss/typography": "0.5.11",
     "cross-env": "7.0.3",
     "postcss": "8.4.38",
     "postcss-import": "16.1.0",
