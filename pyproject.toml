@@ -9,7 +9,7 @@ readme = "docs/README.md"
 [tool.poetry.dependencies]
 python = "3.12.3"
 django = "5.0.6"
-gunicorn = "21.2.0"
+gunicorn = "22.0.0"
 django-guardian = "2.4.0"
 pyjwt = "2.8.0"
 psycopg2-binary = "2.9.9"
