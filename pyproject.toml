@@ -7,7 +7,7 @@ license = "MIT"
 readme = "docs/README.md"
 
 [tool.poetry.dependencies]
-python = "3.12.3"
+python = "3.12.4"
 django = "5.0.6"
 gunicorn = "22.0.0"
 django-guardian = "2.4.0"
