@@ -8,7 +8,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONFAULTHANDLER=1
 
 # dependencies
-FROM node:18-alpine@sha256:054a4be31e7dd879d7b238c68ad9c23b7969686a725305b4edb7c80656c00194 AS node
+FROM node:18-alpine@sha256:a51dcf24295728271111301f628d877a899c6f9b26af7b9cf4f9fe13ef948dc8 AS node
 FROM base AS builder
 
 ## poetry
