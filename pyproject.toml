@@ -5,6 +5,7 @@ description = ""
 authors = ["Glenn <glenn@not-tech.support>"]
 license = "MIT"
 readme = "docs/README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "3.13.1"
