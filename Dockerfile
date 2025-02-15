@@ -20,7 +20,7 @@ ENV POETRY_NO_INTERACTION=1 \
 RUN pip install poetry
 
 COPY poetry.lock pyproject.toml ./
-RUN mkdir docs && touch README.md
+RUN mkdir docs && touch docs/README.md
 
 RUN --mount=type=cache,target=${POETRY_CACHE_DIR} poetry install --only=main
 ENV PATH="/app/.venv/bin:$PATH"
