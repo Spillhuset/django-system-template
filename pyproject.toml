@@ -8,7 +8,7 @@ readme = "docs/README.md"
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "3.13.2"
+python = "3.13.3"
 django = "5.1.8"
 gunicorn = "23.0.0"
 django-guardian = "2.4.0"
