@@ -19,7 +19,7 @@
     "@tailwindcss/line-clamp": "0.4.4",
     "@tailwindcss/typography": "0.5.16",
     "cross-env": "7.0.3",
-    "postcss": "8.4.49",
+    "postcss": "8.5.3",
     "postcss-import": "16.1.0",
     "postcss-nested": "7.0.2",
     "postcss-simple-vars": "7.0.1",
