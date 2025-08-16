@@ -224,13 +224,13 @@ Django = ">=2.2"
 
 [[package]]
 name = "django-tailwind"
-version = "4.0.1"
+version = "4.2.0"
 description = "Tailwind CSS Framework for Django projects"
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "django_tailwind-4.0.1-py3-none-any.whl", hash = "sha256:33e5dd5aadd5aa6facf4bddab9144a40cb501e486d4970b93e2853dbdbef4f67"},
-    {file = "django_tailwind-4.0.1.tar.gz", hash = "sha256:e1f411246208056e8903f304f80a548eac2e5a3c4b6c4adb14eff21ac2dfdd6d"},
+    {file = "django_tailwind-4.2.0-py3-none-any.whl", hash = "sha256:ff40ccb263faefac555fbaa340d6014f2b07fee6be2c8d5659f2cd63dbce02e9"},
+    {file = "django_tailwind-4.2.0.tar.gz", hash = "sha256:60bae45a9981bdf3ebaaa4a8e588533327c90e5857a64f57c26a39b7f234ac0e"},
 ]
 
 [package.dependencies]
@@ -486,4 +486,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "3.13.7"
-content-hash = "e9ce9bc6d4dfb4739beb28f5ea3b95fceaa89ca508250ae1e056463f8e162dd0"
+content-hash = "f619665db3415fefb07b46d253d9ac9bf2e2a0347acfeeb441250cfbdb31f63c"
