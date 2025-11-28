@@ -16,7 +16,7 @@ pyjwt = "2.10.1"
 psycopg2-binary = "2.9.11"
 fontawesomefree = "6.6.0"
 django-google-fonts = "0.0.3"
-django-tailwind = {extras = ["reload"], version = "4.0.1"}
+django-tailwind = {extras = ["reload"], version = "4.4.1"}
 crispy-tailwind = "1.0.3"
 django-crispy-forms = "2.5"
 

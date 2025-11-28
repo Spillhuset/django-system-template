@@ -245,21 +245,24 @@ Django = ">=2.2"
 
 [[package]]
 name = "django-tailwind"
-version = "4.0.1"
+version = "4.4.1"
 description = "Tailwind CSS Framework for Django projects"
 optional = false
-python-versions = "<4.0,>=3.10"
+python-versions = ">=3.11"
 files = [
-    {file = "django_tailwind-4.0.1-py3-none-any.whl", hash = "sha256:33e5dd5aadd5aa6facf4bddab9144a40cb501e486d4970b93e2853dbdbef4f67"},
-    {file = "django_tailwind-4.0.1.tar.gz", hash = "sha256:e1f411246208056e8903f304f80a548eac2e5a3c4b6c4adb14eff21ac2dfdd6d"},
+    {file = "django_tailwind-4.4.1-py3-none-any.whl", hash = "sha256:91e0036247d88412698aa587138adcc3ff0e1d4de5e5189b1de38f435899a018"},
+    {file = "django_tailwind-4.4.1.tar.gz", hash = "sha256:12cea9710ca5f7f2cbd2f3f5c7ec201b21ad3031fe8049c1ad2db36124063e2d"},
 ]
 
 [package.dependencies]
 django = ">=4.2.20"
-django-browser-reload = {version = ">=1.18.0,<2.0.0", optional = true, markers = "extra == \"reload\""}
+django-browser-reload = {version = ">=1.21.0,<2", optional = true, markers = "extra == \"reload\""}
+pytailwindcss = ">=0.3.0"
 
 [package.extras]
-reload = ["django-browser-reload (>=1.18.0,<2.0.0)"]
+cookiecutter = ["cookiecutter (>=2.6.0,<3)"]
+honcho = ["honcho (>=2.0.0,<3)"]
+reload = ["django-browser-reload (>=1.21.0,<2)"]
 
 [[package]]
 name = "fontawesomefree"
@@ -411,6 +414,17 @@ docs = ["sphinx", "sphinx-rtd-theme", "zope.interface"]
 tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
 
 [[package]]
+name = "pytailwindcss"
+version = "0.3.0"
+description = "Standalone Tailwind CSS CLI, installable via pip. Use Tailwind CSS without Node.js."
+optional = false
+python-versions = "<4.0,>=3.11"
+files = [
+    {file = "pytailwindcss-0.3.0-py3-none-any.whl", hash = "sha256:a9b770ad3c0a0f40073052bcfe81a060b550fed38af614a472f5aa7bb85fa8aa"},
+    {file = "pytailwindcss-0.3.0.tar.gz", hash = "sha256:1f71dd64020aacb40608dfe8725ca441c772016c344f757ccbc74b8b6143027d"},
+]
+
+[[package]]
 name = "requests"
 version = "2.32.5"
 description = "Python HTTP for Humans."
@@ -506,4 +520,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "3.14.0"
-content-hash = "25334952dc46526933daaab143b8b7411d25d342522cca5fea571734dfa5ab8b"
+content-hash = "c6abee5d425cb379c4042a33fec00746dfbb34321ee1e532a878430372948ced"
