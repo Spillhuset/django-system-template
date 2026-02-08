@@ -10,7 +10,7 @@ package-mode = false
 [tool.poetry.dependencies]
 python = "3.14.3"
 django = "5.2.11"
-gunicorn = "23.0.0"
+gunicorn = "25.0.3"
 django-guardian = "3.2.0"
 pyjwt = "2.10.1"
 psycopg2-binary = "2.9.11"
