@@ -247,13 +247,13 @@ tinycss2 = ">=1.2.1"
 
 [[package]]
 name = "django-guardian"
-version = "3.2.0"
+version = "3.3.1"
 description = "Per object permissions for Django"
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.10"
 files = [
-    {file = "django_guardian-3.2.0-py3-none-any.whl", hash = "sha256:0768565a057988a93fc4a1d93649c4a794abfd7473a8408a079cfbf83c559d77"},
-    {file = "django_guardian-3.2.0.tar.gz", hash = "sha256:9e18ecd2e211b665972690c2d03d27bce0ea4932b5efac24a4bb9d526950a69e"},
+    {file = "django_guardian-3.3.1-py3-none-any.whl", hash = "sha256:2a3a4b94cdc7e8fc99b74eef163db69d17703dc397c3e9085c7231f2b2bcf431"},
+    {file = "django_guardian-3.3.1.tar.gz", hash = "sha256:7a50eada72161e355a9dbf9fe0838855c0ec851dd9b39f4f16e2decb5f4c7988"},
 ]
 
 [package.dependencies]
@@ -536,4 +536,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "3.14.4"
-content-hash = "e7188c303bc550bebabdfdb9e58b1d09714aaa3122ab46d0eb758e39549f7f9f"
+content-hash = "a7595c6e7b2c8b83b0343bf7e2dd2e4e7f7cc92f52a323823ce23272123d43a0"
