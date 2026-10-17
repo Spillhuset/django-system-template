@@ -1,5 +1,5 @@
 # base image
-FROM python:3.14.8-alpine@sha256:8acac70227ce3b34da9453120c375cc5b66cd0b062d4dc6bc74286f81a3819e1 AS base
+FROM python:3.15.0-alpine@sha256:e7044ccc46c44b6174e0051dbdcb84c79e19d0f2c398d28d5d45521ea42b01e2 AS base
 WORKDIR /app
 
 ## set environment variables
