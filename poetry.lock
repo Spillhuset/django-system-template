@@ -583,5 +583,5 @@ test = ["pytest", "ruff"]
 
 [metadata]
 lock-version = "2.0"
-python-versions = "3.14.8"
-content-hash = "c6966e54b434fe0650823933b2b8228885e04ddba7e3a7c5129fbf6228e8142d"
+python-versions = "3.15.2"
+content-hash = "e5b392f6a03b2df5985d9017feae817eef0ee5015737325e690e72ea87f6e0de"
